@@ -77,13 +77,23 @@ El resultado del reto será un dataset por persona o equipo que contenga el data
 
 ## Como cargar el dataset en Argilla
 
-```python
-import argilla as rg
-from dataset ...
-```
+Para cargar el dataset, se puede [utilizar este notebook de Colab](https://colab.research.google.com/drive/1KyikSFeJe6_lQNs-9cHveIOGM99ENha9?usp=sharing).
 ## Guías de anotación
 
-## Como guardar el dataset en el Hub
+TODO
 
+## Como guardar el dataset en el Hub
+Periodicamente se recomienda guardar una copia del dataset en el Hub ejecutando el siguiente código:
+
+```python
+import argilla as rg
+
+# usar rg.init() si es necesario para definir la API_URL y API_KEY como en el notebook de carga del dataset
+rg.load("somos-alpaca-es").to_datasets().push_to_hub("somos-alpaca-es") # se puede poner el nombre que se quiera en la llamada a push_to_hub
+```
+
+Una vez hecho esto se puede recuperar el dataset y volver a cargar en Argilla con el notebook de "Como cargar el dataset en Argilla"
 
 ## Ejemplos de consultas y trucos para etiquetar
+
+TODO
