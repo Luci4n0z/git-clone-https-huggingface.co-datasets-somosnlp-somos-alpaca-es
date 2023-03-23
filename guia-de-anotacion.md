@@ -40,12 +40,56 @@ Esta etiqueta se utilizará en los siguientes supuestos:
 - Cuando la instrucción no requiere de un *input* y sin embargo este campo tiene contenido.
 - Cuando se proporcione un *input* que no sea coherente con la instrucción o contenga errores.
 
+Estos son algunos ejemplos de *input* válido e inválido:
 
+❌ 1-Instruction: Clasifica el siguiente titular entre las siguientes categorías: política, deportes, internacional.
+
+2-Input:
+
+3-Output: política
+
+❌ 1-Instruction: ¿Quién era el presidente de Canadá en el año 1998?
+
+2-Input: Jean Chrétien
+
+3-Oputput: true
+
+❌ 1-Instruction: Dada una lista de palabras, dime un sinónimo para cada una.
+
+2-Input: 1,2,3,4,5
+
+3-Output: 1,2,3,4,5
+
+✅ 1-Instruction: El siguiente tweet contiene errores ortográficos. Contesta true o false.
+
+2-Input: Este tweet cnotiene un error.
+
+3-Output: true
 
 ### BAD OUTPUT
 Utilizar esta etiqueta si el resultado no es coherente con la intrucción + *input* proporcionados o en el caso de que contenga errores.
 **IMPORTANTE** En el caso de este dataset un error sería que el *output* no siguiera la variedad del español que aparezca en la instrucción 
 o el *input*, por ejemplo si la instrucción usa *usted* y la respuesta *tú*.
+
+Estos son algunos ejemplos de respuestas válidas e inválidas:
+
+✅ 1-Instruction: ¿Quién era el presidente de Canadá en el año 1998?
+
+2-Input:
+
+3-Output: Jean Chrétien
+
+❌ 1-Instruction: ¿Quién era el presidente de Canadá en el año 1998?
+
+2-Input:
+
+3-Output: Justin Trudeau
+
+❌ 1-Instruction: Clasifica este titular entre las siguientes categorías: política, deporte, internacional.
+
+2-Input: Récord mundial por la compra del Manchester United: el catarí Jassim al-Thani ofrece 6.000 millones por el club
+
+3-Output: (a)
 
 ### INAPPROPRIATE
 Utilizar esta etiqueta si todos los campos anteriores son correctos y coherentes pero el contenido puede ser considerado inapropiado o 
