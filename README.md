@@ -78,9 +78,10 @@ El resultado del reto será un dataset por persona o equipo que contenga el data
 ## Como cargar el dataset en Argilla
 
 Para cargar el dataset, se puede [utilizar este notebook de Colab](https://colab.research.google.com/drive/1KyikSFeJe6_lQNs-9cHveIOGM99ENha9?usp=sharing).
+
 ## Guías de anotación
 
-TODO
+Antes de empezar a anotar, es necesario leer la [guía de anotación](guia-de-anotacion.md) al completo.
 
 ## Como guardar el dataset en el Hub
 Periodicamente se recomienda guardar una copia del dataset en el Hub ejecutando el siguiente código:
