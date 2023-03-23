@@ -75,9 +75,13 @@ A continuación se describen los pasos y normas para participar:
 
 El resultado del reto será un dataset por persona o equipo que contenga el dataset original etiquetado parcialmente, y opcionalmente otras versiones/subconjuntos del dataset con los datos corregidos, mejorados o aumentados. En estos casos es conveniente mantener un dataset a parte con los ids originales.
 
-## Como cargar el dataset en Argilla
+## Como empezar a etiquetar
 
-Para cargar el dataset, se puede [utilizar este notebook de Colab](https://colab.research.google.com/drive/1KyikSFeJe6_lQNs-9cHveIOGM99ENha9?usp=sharing).
+Para etiquetar el dataset tienes que:
+
+1. Lanzar tu Argilla Space siguiendo [este link](https://huggingface.co/spaces/somosnlp/somos-alpaca-es?duplicate=true). Esto te guiará para crear una instancia de Argilla en el Hub que cargará automaticamente el dataset. **IMPORTANTE**: que el Space se Public para poder leer los datos etiquetados desde Python. El proceso de carga puede tardar hasta 10 minutos, puedes consultar los logs para comprobar que se están cargando los datos.
+2. Mientras se carga tu Argilla Space con el dataset puedes aprovechar para leer las guías de anotación.
+3. Recomendamos que abras Colab o un notebook en local y que guardes el dataset periodicamente en un dataset del Hub (puede ser en tu espacio personal o tu organización). Para ello recomendamos leer el apartado como guardar el dataset en el Hub.
 
 ## Guías de anotación
 
