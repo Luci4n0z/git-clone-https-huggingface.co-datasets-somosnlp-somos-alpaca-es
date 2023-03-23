@@ -89,8 +89,10 @@ Para etiquetar el dataset tienes que:
 
 Antes de empezar a anotar, es necesario leer la [guía de anotación](guia-de-anotacion.md) al completo.
 
-## Como guardar el dataset en el Hub
-Periodicamente se recomienda guardar una copia del dataset en el Hub ejecutando el siguiente código:
+## IMPORTANTE: Guardar el dataset en el Hub periodicamente
+
+***
+Periodicamente se debe guardar una copia del dataset en el Hub ejecutando el siguiente código. Es necesario hacer login con Python usando `from huggingface_hub import notebook_login` o añadir el token directamente al hacer el push_to_hub:
 
 ```python
 import argilla as rg
@@ -102,7 +104,7 @@ rg.init(
 )
 
 # el primer nombre es el dataset en argilla, el segundo es el dataset en el Hub.
-rg.load("somos-alpaca-es-team").to_datasets().push_to_hub("somos-alpaca-es") 
+rg.load("somos-alpaca-es-team").to_datasets().push_to_hub("somos-alpaca-es", token="TU TOKEN WRITE EN SETTINGS HUB. NO NECESARIO SI HAS HECHO LOGIN") 
 ```
 
 Una vez hecho esto se puede recuperar el dataset y volver a cargar en Argilla con el notebook de "Como cargar el dataset en Argilla"
