@@ -121,7 +121,7 @@ Un aspecto interesante es la capacidad de buscar solo en determinados campos. Pa
 
 Por ejemplo: `inputs.1-instruction:"Crear una página"` encontraría todos aquellos registros con este texto en la instrucción
 
-Además esto se puede combinar con expresiones booleanas para buscar en varios campos: `inputs.1-instruction:"Crear una página" inputs.1-instruction:"Crear una página" AND inputs.3-output:"html"`
+Además esto se puede combinar con expresiones booleanas para buscar en varios campos: `inputs.1-instruction:"Crear una página" AND inputs.3-output:"html"`
 
 ### Find similar
 Cuando encontramos patrones interesantes o erroneos en un registro y campo, podemos usar el botón find similar para encontrar ejemplos similares gracias al uso de similarity search usando embeddings.
