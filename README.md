@@ -126,4 +126,5 @@ Además esto se puede combinar con expresiones booleanas para buscar en varios c
 ### Find similar
 Cuando encontramos patrones interesantes o erroneos en un registro y campo, podemos usar el botón find similar para encontrar ejemplos similares gracias al uso de similarity search usando embeddings.
 
-
+### Etiquetado en lote (bulk)
+Si encontramos un patrón muy claro, podemos revisar los ejemplos más rápido y anotarlos en bloque usando la barra superior, debajo del buscador. Si hay mucho ejemplos se puede aumentar el número de registros por página. Se recomienda en cualquier caso revisar los ejemplos.
