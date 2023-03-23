@@ -95,12 +95,35 @@ Periodicamente se recomienda guardar una copia del dataset en el Hub ejecutando 
 ```python
 import argilla as rg
 
-# usar rg.init() si es necesario para definir la API_URL y API_KEY como en el notebook de carga del dataset
-rg.load("somos-alpaca-es").to_datasets().push_to_hub("somos-alpaca-es") # se puede poner el nombre que se quiera en la llamada a push_to_hub
+# usar rg.init() para definir la API_URL (la direct URL de tu Space de Argilla) y API_KEY
+rg.init(
+    api_url="https://tu-space-de-argilla.hf.space",
+    api_key="team.apikey"
+)
+
+# el primer nombre es el dataset en argilla, el segundo es el dataset en el Hub.
+rg.load("somos-alpaca-es-team").to_datasets().push_to_hub("somos-alpaca-es") 
 ```
 
 Una vez hecho esto se puede recuperar el dataset y volver a cargar en Argilla con el notebook de "Como cargar el dataset en Argilla"
 
 ## Ejemplos de consultas y trucos para etiquetar
 
-TODO
+Se recomienda comenzar explorando y etiquetando el dataset de manera secuencial para entender la estructura e ir identificando patrones.
+
+Una vez hecho esto se recomienda combinarlo con:
+
+### Utilizar el buscador
+
+Tanto con palabras clave, como con expresiones regulares, y wildcards y expresiones booleanas, ver [la guía de uso](https://docs.argilla.io/en/latest/guides/query_datasets.html).
+
+Un aspecto interesante es la capacidad de buscar solo en determinados campos. Para ello, hay que utilizar la siguiente sintaxis `inputs.nombre_del_campo:"consulta"`:
+
+Por ejemplo: `inputs.1-instruction:"Crear una página"` encontraría todos aquellos registros con este texto en la instrucción
+
+Además esto se puede combinar con expresiones booleanas para buscar en varios campos: `inputs.1-instruction:"Crear una página" inputs.1-instruction:"Crear una página" AND inputs.3-output:"html"`
+
+### Find similar
+Cuando encontramos patrones interesantes o erroneos en un registro y campo, podemos usar el botón find similar para encontrar ejemplos similares gracias al uso de similarity search usando embeddings.
+
+
