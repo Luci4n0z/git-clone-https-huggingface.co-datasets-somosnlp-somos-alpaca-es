@@ -62,6 +62,12 @@ Este conjunto de datos sirve como referencia para el esfuerzo colaborativo de li
 
 Cuantas más personas y equipos participen mayor calidad final se podrá obtener. 
 
+---
+➡️ **ACTUALIZACION**: Contribuye al etiquetado de la traducción de la versión limpia: [somos-clean-alpaca-es](https://huggingface.co/datasets/somosnlp/somos-clean-alpaca-es)
+
+---
+
+
 ## El reto
 
 A continuación se describen los pasos y normas para participar:
