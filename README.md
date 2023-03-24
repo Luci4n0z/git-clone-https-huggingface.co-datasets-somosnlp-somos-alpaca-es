@@ -87,6 +87,10 @@ Para etiquetar el dataset tienes que:
 Se recomienda mirar el log del Space para ver si hay errores a la hora de configurar los Secret `HF_TOKEN` y `HF_DATASET_NAME`.
 ![Duplicar Space](duplicar-space.png)
 
+## Desplegar Argilla localmente o en un servidor cloud
+Para equipos que tengan el tiempo y quieran desplegar una versión con más capacidad de computación y estabilidad que Spaces, [aquí hay una guía explicativa](https://docs.argilla.io/en/latest/getting_started/installation/deployments/deployments.html).
+Una vez instalada, se deben subir los datos con [este notebook](https://colab.research.google.com/drive/1KyikSFeJe6_lQNs-9cHveIOGM99ENha9#scrollTo=jbfdRoRVXTW6).
+
 ## Guías de anotación
 
 Antes de empezar a anotar, es necesario leer la [guía de anotación](guia-de-anotacion.md) al completo.
